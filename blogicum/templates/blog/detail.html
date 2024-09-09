@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}
+Читать полный текст
+{% endblock %}
+{% block content %}
+{% load static %}
+{% include "includes/article.html" with articles=True %}
+{% endblock %}

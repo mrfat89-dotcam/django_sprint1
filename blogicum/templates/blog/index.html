@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+   Лента записей
+{% endblock %}
+{% block content %}
+{% load static %}
+  <h1>Лента записей</h1>
+    {% for post in post %}
+      <hr>
+      {% include "includes/article.html" %}
+    {% endfor %}
+{% endblock %}
