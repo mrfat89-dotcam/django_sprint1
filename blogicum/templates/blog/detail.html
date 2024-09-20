@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}
-  Остров отчаяния {{ post.date }}
+  {{ post.location }} {{ post.date }}
 {% endblock %}
 {% block content %}
-{% include "includes/article.html" with articles=True %} 
+  {% include "includes/article.html" %} 
 {% endblock %}
