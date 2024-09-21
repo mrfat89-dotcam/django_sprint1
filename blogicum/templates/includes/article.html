@@ -1,4 +1,3 @@
-
 <article>
   <ul>
     <li>
@@ -14,12 +13,10 @@
     </li>
   </ul>
 {% if request.resolver_match.view_name == 'blog:index' %}
-<p>{{ post.text|truncatewords:10 }} </p> 
-<a href="{% url 'blog:post_detail' post.id %}"> Читать полный текст </a>
+  <p>{{ post.text|truncatewords:10 }} </p> 
+  <a href="{% url 'blog:post_detail' post.id %}"> Читать полный текст </a>
 {% endif %}
 {% if request.resolver_match.view_name == 'blog:post_detail' %}
-
-<p>{{ post.text|linebreaksbr }}</p>
- 
-  {% endif %}
+  <p>{{ post.text|linebreaksbr }}</p> 
+{% endif %}
 </article>
